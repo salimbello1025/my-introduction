@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+<script>
+    // Ask the user for their mark
+    let mark = prompt("Please enter your mark (0-100):");
+    
+    // Convert the input to a number
+    mark = Number(mark);
+    
+    // Declare the grade variable
+    let grade;
+    
+    // Check the conditions using IF/ELSE
+    if (mark >= 70 && mark <= 100) {
+        grade = "A";
+    } else if (mark >= 50 && mark <= 60) {
+        grade = "C";
+    } else if (mark >= 0 && mark <= 40) {
+        grade = "F";
+    } else {
+        grade = "No grade defined for this mark";
+    }
+    
+    // Display the result on the page
+    document.write("<h1>Mark: " + mark + "</h1>");
+    document.write("<h1>Grade: " + grade + "</h1>");
+    
+    // Also show in an alert
+    alert("Your mark is " + mark + " and your grade is " + grade);
+</script>
+
+</body>
+</html>
