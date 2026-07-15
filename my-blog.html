@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salim's Learning Journey Blog</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Header */
+        header {
+            background-color: #1A6BCC;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 42px;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #154f99;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-family: 'Arial', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #f0c040;
+            text-decoration: underline;
+        }
+
+        /* Table of Contents */
+        .toc {
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #e8f0fb;
+            border-left: 6px solid #1A6BCC;
+            border-radius: 10px;
+        }
+
+        .toc h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 26px;
+            color: #1A6BCC;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .toc ol {
+            font-family: 'Georgia', serif;
+            font-size: 17px;
+            line-height: 2.4;
+            padding-left: 20px;
+        }
+
+        .toc a {
+            color: #1A6BCC;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+            color: #c8500a;
+        }
+
+        /* Blog entry */
+        .blog-entry {
+            max-width: 860px;
+            margin: 50px auto;
+            padding: 36px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .blog-entry h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: #1A6BCC;
+            margin-bottom: 4px;
+            border-bottom: 2px solid #e8f0fb;
+            padding-bottom: 10px;
+        }
+
+        .blog-date {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .blog-entry p {
+            font-family: 'Georgia', serif;
+            font-size: 17px;
+            line-height: 1.9;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        /* Tags */
+        .tags {
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e8f0fb;
+            color: #1A6BCC;
+            font-family: 'Arial', sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+        }
+
+        /* Quote box */
+        .quote {
+            background-color: #f0f7ff;
+            border-left: 5px solid #1A6BCC;
+            padding: 16px 24px;
+            margin: 24px 0;
+            border-radius: 6px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 17px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Highlight */
+        .highlight {
+            background-color: #fff8e1;
+            border-left: 5px solid #f0c040;
+            padding: 16px 24px;
+            border-radius: 6px;
+            margin: 24px 0;
+            font-family: 'Arial', sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        /* Back to top */
+        .back-top {
+            display: inline-block;
+            margin-top: 24px;
+            color: #1A6BCC;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back-top:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #154f99;
+            color: white;
+            text-align: center;
+            padding: 28px;
+            margin-top: 60px;
+            font-family: 'Arial', sans-serif;
+            font-size: 15px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>📝 Salim's Learning Journey</h1>
+        <p>Documenting my path from beginner to UI/UX Designer & Web Developer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#toc">Contents</a>
+        <a href="#entry1">Entry 1</a>
+        <a href="#entry2">Entry 2</a>
+        <a href="#entry3">Entry 3</a>
+    </nav>
+
+    <!-- Table of Contents -->
+    <div class="toc" id="toc">
+        <h2>📋 Table of Contents</h2>
+        <ol>
+            <li><a href="#entry1">My First Day at eHealth Africa Academy June 2026</a></li>
+            <li><a href="#entry2">Discovering the Power of UI/UX Design June 2026</a></li>
+            <li><a href="#entry3">Building My First Webpage with HTML & CSS July 2026</a></li>
+        </ol>
+    </div>
+
+    <!-- Blog Entry 1 -->
+    <div class="blog-entry" id="entry1">
+        <h2>My First Day at eHealth Africa Academy</h2>
+        <p class="blog-date">📅 Published: June 12, 2026 | By Salim Bello Muhammad</p>
+
+        <p>
+            I still remember the excitement I felt on my first day at eHealth Africa Academy in Kano. I had always been curious about technology and how websites and apps were made, but I never had a structured path to learn. That all changed when I joined the UI/UX Design programme.
+        </p>
+
+        <p>
+            The first module was about setting up my environment installing Visual Studio Code, learning about GitHub, and writing my very first HTML page. Something as simple as seeing my name appear in a browser window for the first time felt like a massive achievement. It was the moment I realized that coding was not as intimidating as I had imagined.
+        </p>
+
+        <div class="quote">
+            "Every expert was once a beginner. The journey of a thousand miles begins with a single step." Lao Tzu
+        </div>
+
+        <p>
+            The mentors at eHealth Africa Academy were incredibly supportive from day one. They broke down complex concepts into simple, understandable pieces and made sure no one was left behind. I was nervous at first, but the learning environment was warm, encouraging, and practical.
+        </p>
+
+        <div class="highlight">
+            💡 <strong>What I learned on Day 1:</strong> How to install VS Code, set up Live Server, write basic HTML structure, and push code to GitHub for the first time.
+        </div>
+
+        <div class="tags">
+            <span class="tag">#HTML</span>
+            <span class="tag">#GitHub</span>
+            <span class="tag">#BeginnerCoder</span>
+            <span class="tag">#eHealthAfrica</span>
+        </div>
+
+        <a href="#toc" class="back-top">⬆️ Back to Table of Contents</a>
+    </div>
+
+    <!-- Blog Entry 2 -->
+    <div class="blog-entry" id="entry2">
+        <h2>Discovering the Power of UI/UX Design</h2>
+        <p class="blog-date">📅 Published: June 20, 2026 | By Salim Bello Muhammad</p>
+
+        <p>
+            A few weeks into the programme, we shifted from coding to design and this is where everything truly clicked for me. I had always appreciated beautiful websites and apps, but I never knew what went into creating them. Learning about UI (User Interface) and UX (User Experience) design opened my eyes to a completely new world.
+        </p>
+
+        <p>
+            We started with wireframing in Figma creating low-fidelity sketches of app screens. My first project was a simple to-do app with just two screens: a home screen showing a list of tasks, and a detail screen showing information about a specific task. It might sound simple, but the process of thinking through how a user would interact with the app was genuinely fascinating.
+        </p>
+
+        <div class="quote">
+            "Design is not just what it looks like and feels like. Design is how it works." Steve Jobs
+        </div>
+
+        <p>
+            One of the most important things I learned was about <strong>visual hierarchy</strong> making sure the most important information on a screen is the most visible. This principle changed the way I look at every website and app I use. I started noticing design decisions everywhere the size of buttons, the color of links, the spacing between elements.
+        </p>
+
+        <p>
+            I also learned about <strong>accessibility</strong> designing for everyone, including people with visual impairments. Checking color contrast ratios on WebAIM and adjusting my coral color from #D85A30 to #B34A22 to meet WCAG AA standards was a real-world lesson that stuck with me.
+        </p>
+
+        <div class="highlight">
+            💡 <strong>Key lessons from this phase:</strong> Wireframing in Figma, visual hierarchy, color contrast (WCAG AA minimum 4.5:1), component-based design, and responsive layouts for mobile and desktop.
+        </div>
+
+        <div class="tags">
+            <span class="tag">#UIDesign</span>
+            <span class="tag">#UXDesign</span>
+            <span class="tag">#Figma</span>
+            <span class="tag">#Accessibility</span>
+            <span class="tag">#Wireframing</span>
+        </div>
+
+        <a href="#toc" class="back-top">⬆️ Back to Table of Contents</a>
+    </div>
+
+    <!-- Blog Entry 3 -->
+    <div class="blog-entry" id="entry3">
+        <h2>Building My First Webpage with HTML & CSS</h2>
+        <p class="blog-date">📅 Published: July 15, 2026 | By Salim Bello Muhammad</p>
+
+        <p>
+            Coming from a design background (having spent weeks in Figma), moving into actual web development with HTML and CSS felt like bringing my designs to life. There is something incredibly satisfying about writing code and seeing a styled webpage appear in your browser knowing that YOU built it from scratch.
+        </p>
+
+        <p>
+            My first major HTML/CSS project was a travel webpage about Dubai. I used CSS to style everything from the golden header color to the hover effects on navigation links. I learned about selectors, font properties, margins, padding, and how to arrange elements on a page. What surprised me most was how much control CSS gives you over every tiny detail of a webpage's appearance.
+        </p>
+
+        <div class="quote">
+            "The details are not the details. They make the design." Charles Eames
+        </div>
+
+        <p>
+            I also built a Hausa Traditional Recipe Book which was personally meaningful to me because it celebrated the food and culture of my home in Kano, Nigeria. Using HTML tables for ingredients, ordered lists for cooking steps, and internal links for the table of contents made the page feel like a real, professional website.
+        </p>
+
+        <p>
+            Looking back at where I started a blank HTML file with just my name in an h1 tag and comparing it to what I can build now, I feel an enormous sense of pride and progress. This journey has shown me that with consistency, curiosity, and the right guidance, anyone can learn to design and build for the web.
+        </p>
+
+        <div class="highlight">
+            💡 <strong>Projects completed so far:</strong> Personal introduction page, to-do app wireframes, profile screen, responsive dashboard, mini style guide, Dubai travel webpage, Hausa recipe book, JavaScript greeting and grade calculator, and the HealthBridge healthcare web app concept.
+        </div>
+
+        <div class="tags">
+            <span class="tag">#HTML</span>
+            <span class="tag">#CSS</span>
+            <span class="tag">#WebDevelopment</span>
+            <span class="tag">#Nigeria</span>
+            <span class="tag">#Kano</span>
+        </div>
+
+        <a href="#toc" class="back-top">⬆️ Back to Table of Contents</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>📝 Salim's Learning Journey Blog | eHealth Africa Academy — Kano, Nigeria</p>
+        <p>© 2026 Salim Bello Muhammad. All rights reserved.</p>
+        <p>GitHub: <a href="https://github.com/salimbello1025" style="color:#f0c040;">github.com/salimbello1025</a></p>
+    </footer>
+
+</body>
+</html>
