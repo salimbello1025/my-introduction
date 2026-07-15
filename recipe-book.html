@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hausa Traditional Recipe Book</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6ec;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #8B2500;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #5c1a00;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #f4a460;
+        }
+
+        /* Table of Contents */
+        .toc {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff8f0;
+            border-left: 6px solid #8B2500;
+            border-radius: 10px;
+        }
+
+        .toc h2 {
+            color: #8B2500;
+            font-size: 28px;
+        }
+
+        .toc ol {
+            font-size: 18px;
+            line-height: 2.2;
+        }
+
+        .toc a {
+            color: #8B2500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+            color: #c8500a;
+        }
+
+        /* Recipe sections */
+        .recipe {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .recipe h2 {
+            color: #8B2500;
+            font-size: 32px;
+            border-bottom: 3px solid #8B2500;
+            padding-bottom: 10px;
+        }
+
+        .recipe p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* Recipe image */
+        .recipe img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        /* Ingredients table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        table th {
+            background-color: #8B2500;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #fff8f0;
+        }
+
+        /* Recipe details list */
+        .details {
+            background-color: #fff8f0;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .details li::marker {
+            color: #8B2500;
+        }
+
+        /* Steps */
+        ol.steps {
+            font-size: 16px;
+            line-height: 2.2;
+            color: #444;
+            padding-left: 20px;
+        }
+
+        ol.steps li {
+            margin-bottom: 10px;
+        }
+
+        /* Source link */
+        .source {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        .source a {
+            color: #8B2500;
+        }
+
+        /* Back to top */
+        .back-top {
+            display: inline-block;
+            margin-top: 20px;
+            color: #8B2500;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back-top:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5c1a00;
+            color: white;
+            text-align: center;
+            padding: 24px;
+            margin-top: 60px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🍲 Hausa Traditional Recipe Book</h1>
+        <p>Authentic flavours from the heart of Northern Nigeria</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#toc">Table of Contents</a>
+        <a href="#tuwo">Tuwo Shinkafa</a>
+        <a href="#miyan-kuka">Miyan Kuka</a>
+        <a href="#masa">Masa</a>
+    </nav>
+
+    <!-- Table of Contents -->
+    <div class="toc" id="toc">
+        <h2>📋 Table of Contents</h2>
+        <ol>
+            <li><a href="#tuwo">Tuwo Shinkafa — Traditional Rice Pudding</a></li>
+            <li><a href="#miyan-kuka">Miyan Kuka — Baobab Leaf Soup</a></li>
+            <li><a href="#masa">Masa — Hausa Rice Cakes</a></li>
+        </ol>
+    </div>
+
+    <!-- Recipe 1: Tuwo Shinkafa -->
+    <div class="recipe" id="tuwo">
+        <h2>1. 🍚 Tuwo Shinkafa</h2>
+        <p>
+            Tuwo Shinkafa is a beloved staple of Hausa cuisine, made from soft-cooked rice that is mashed into a smooth, thick dough-like consistency. It is traditionally served with soups such as Miyan Kuka, Miyan Taushe, or Miyan Geda. This comforting dish is a symbol of Hausa hospitality and is enjoyed across Northern Nigeria daily.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1536304993881-ff86e0c9b9a9?w=800" alt="Tuwo Shinkafa - Traditional Hausa Rice Pudding">
+
+        <!-- Recipe Details -->
+        <h3>📝 Recipe Details</h3>
+        <ul class="details">
+            <li>⏱️ <strong>Prep Time:</strong> 10 minutes</li>
+            <li>🍳 <strong>Cook Time:</strong> 40 minutes</li>
+            <li>👥 <strong>Servings:</strong> 4 people</li>
+            <li>🌍 <strong>Origin:</strong> Northern Nigeria</li>
+            <li>⚡ <strong>Difficulty:</strong> Easy</li>
+        </ul>
+
+        <!-- Ingredients Table -->
+        <h3>🛒 Ingredients</h3>
+        <table>
+            <tr>
+                <th>Ingredient</th>
+                <th>Quantity</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Short grain rice</td>
+                <td>2 cups</td>
+                <td>Washed and rinsed</td>
+            </tr>
+            <tr>
+                <td>Water</td>
+                <td>6 cups</td>
+                <td>For cooking</td>
+            </tr>
+            <tr>
+                <td>Salt</td>
+                <td>1 teaspoon</td>
+                <td>Optional</td>
+            </tr>
+        </table>
+
+        <!-- Steps -->
+        <h3>👨‍🍳 Cooking Steps</h3>
+        <ol class="steps">
+            <li>Wash the rice thoroughly with clean water until the water runs clear.</li>
+            <li>Add 6 cups of water to a large pot and bring to a boil over high heat.</li>
+            <li>Add the washed rice to the boiling water and stir well.</li>
+            <li>Reduce the heat to medium and cook for 25-30 minutes, stirring occasionally, until the rice is very soft and overcooked.</li>
+            <li>Once the rice is very soft, use a wooden spoon or mortar pestle to mash and stir the rice vigorously until it forms a smooth, thick, dough-like consistency with no lumps.</li>
+            <li>Continue stirring on low heat for another 5-10 minutes until the tuwo holds its shape.</li>
+            <li>Wet your hands, shape the tuwo into round balls, and serve hot alongside your favourite soup.</li>
+        </ol>
+
+        <p class="source">Source: <a href="https://www.hausa-cuisine.com" target="_blank">Traditional Hausa Cuisine</a></p>
+        <a href="#toc" class="back-top">⬆️ Back to Table of Contents</a>
+    </div>
+
+    <!-- Recipe 2: Miyan Kuka -->
+    <div class="recipe" id="miyan-kuka">
+        <h2>2. 🌿 Miyan Kuka</h2>
+        <p>
+            Miyan Kuka is a traditional Hausa soup made from dried baobab leaves (kuka), which give it a distinctive dark green color and earthy flavour. It is one of the most iconic soups in Northern Nigerian cuisine and is almost always served with Tuwo Shinkafa. Rich in nutrients and deeply satisfying, Miyan Kuka is a true taste of Hausa culture.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800" alt="Miyan Kuka - Traditional Hausa Baobab Soup">
+
+        <!-- Recipe Details -->
+        <h3>📝 Recipe Details</h3>
+        <ul class="details">
+            <li>⏱️ <strong>Prep Time:</strong> 15 minutes</li>
+            <li>🍳 <strong>Cook Time:</strong> 45 minutes</li>
+            <li>👥 <strong>Servings:</strong> 4-6 people</li>
+            <li>🌍 <strong>Origin:</strong> Northern Nigeria</li>
+            <li>⚡ <strong>Difficulty:</strong> Medium</li>
+        </ul>
+
+        <!-- Ingredients Table -->
+        <h3>🛒 Ingredients</h3>
+        <table>
+            <tr>
+                <th>Ingredient</th>
+                <th>Quantity</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Dried kuka (baobab leaves)</td>
+                <td>3 tablespoons</td>
+                <td>Ground into powder</td>
+            </tr>
+            <tr>
+                <td>Beef or goat meat</td>
+                <td>500g</td>
+                <td>Cut into chunks</td>
+            </tr>
+            <tr>
+                <td>Palm oil</td>
+                <td>3 tablespoons</td>
+                <td>For richness</td>
+            </tr>
+            <tr>
+                <td>Dawadawa (locust beans)</td>
+                <td>2 tablespoons</td>
+                <td>For flavour</td>
+            </tr>
+            <tr>
+                <td>Dried pepper</td>
+                <td>2 teaspoons</td>
+                <td>Adjust to taste</td>
+            </tr>
+            <tr>
+                <td>Maggi/seasoning cubes</td>
+                <td>2 cubes</td>
+                <td>To taste</td>
+            </tr>
+            <tr>
+                <td>Salt</td>
+                <td>To taste</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Water</td>
+                <td>4 cups</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <!-- Steps -->
+        <h3>👨‍🍳 Cooking Steps</h3>
+        <ol class="steps">
+            <li>Season the meat with salt, pepper, and one seasoning cube. Cook in a pot with a little water for 20 minutes until tender.</li>
+            <li>Add palm oil to the cooked meat and stir well over medium heat.</li>
+            <li>Add the dawadawa (locust beans) and dried pepper and stir for 2 minutes.</li>
+            <li>Add 4 cups of water and bring to a boil.</li>
+            <li>Gradually add the kuka powder while stirring continuously to avoid lumps forming.</li>
+            <li>Add the remaining seasoning cube and salt to taste.</li>
+            <li>Reduce heat and simmer for 15-20 minutes, stirring occasionally, until the soup thickens and develops a rich, dark colour.</li>
+            <li>Serve hot with Tuwo Shinkafa or Tuwo Masara.</li>
+        </ol>
+
+        <p class="source">Source: <a href="https://www.nigerianlazychef.com" target="_blank">Nigerian Lazy Chef</a></p>
+        <a href="#toc" class="back-top">⬆️ Back to Table of Contents</a>
+    </div>
+
+    <!-- Recipe 3: Masa -->
+    <div class="recipe" id="masa">
+        <h2>3. 🥞 Masa</h2>
+        <p>
+            Masa are traditional Hausa rice cakes that are light, fluffy, and slightly sour from fermentation. They are cooked in a special round-holed pan called a "masara" and are popular as a breakfast food or snack across Northern Nigeria. Masa can be enjoyed with honey, sugar, miyan taushe, or kunu drink. They are a beloved street food in Kano and other northern cities.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800" alt="Masa - Traditional Hausa Rice Cakes">
+
+        <!-- Recipe Details -->
+        <h3>📝 Recipe Details</h3>
+        <ul class="details">
+            <li>⏱️ <strong>Prep Time:</strong> 8 hours (fermentation) + 20 minutes</li>
+            <li>🍳 <strong>Cook Time:</strong> 30 minutes</li>
+            <li>👥 <strong>Servings:</strong> 6-8 people</li>
+            <li>🌍 <strong>Origin:</strong> Kano, Northern Nigeria</li>
+            <li>⚡ <strong>Difficulty:</strong> Medium</li>
+        </ul>
+
+        <!-- Ingredients Table -->
+        <h3>🛒 Ingredients</h3>
+        <table>
+            <tr>
+                <th>Ingredient</th>
+                <th>Quantity</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Long grain rice</td>
+                <td>3 cups</td>
+                <td>Soaked overnight</td>
+            </tr>
+            <tr>
+                <td>Cooked rice</td>
+                <td>1 cup</td>
+                <td>Helps with texture</td>
+            </tr>
+            <tr>
+                <td>Yeast</td>
+                <td>1 teaspoon</td>
+                <td>For fermentation</td>
+            </tr>
+            <tr>
+                <td>Sugar</td>
+                <td>2 tablespoons</td>
+                <td>For slight sweetness</td>
+            </tr>
+            <tr>
+                <td>Salt</td>
+                <td>1 teaspoon</td>
+                <td>To taste</td>
+            </tr>
+            <tr>
+                <td>Water</td>
+                <td>As needed</td>
+                <td>For blending</td>
+            </tr>
+            <tr>
+                <td>Vegetable oil</td>
+                <td>For greasing</td>
+                <td>To prevent sticking</td>
+            </tr>
+        </table>
+
+        <!-- Steps -->
+        <h3>👨‍🍳 Cooking Steps</h3>
+        <ol class="steps">
+            <li>Soak the raw rice in water for at least 6-8 hours or overnight.</li>
+            <li>Drain the soaked rice and blend together with the cooked rice and enough water to form a smooth, thick batter.</li>
+            <li>Add the yeast, sugar, and salt to the batter and mix well.</li>
+            <li>Cover the batter and leave it to ferment in a warm place for 6-8 hours until it rises slightly and smells slightly sour.</li>
+            <li>Heat a masa pan (or any small round-holed pan) over medium heat and grease each hole with a little oil.</li>
+            <li>Pour the batter into each hole until about ¾ full.</li>
+            <li>Cover and cook for 3-4 minutes until the bottom is golden brown and the top is set.</li>
+            <li>Flip each masa carefully and cook the other side for 2 more minutes until lightly golden.</li>
+            <li>Remove and serve warm with honey, sugar, or miyan taushe soup.</li>
+        </ol>
+
+        <p class="source">Source: <a href="https://www.allnigerianrecipes.com" target="_blank">All Nigerian Recipes</a></p>
+        <a href="#toc" class="back-top">⬆️ Back to Table of Contents</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🍲 Hausa Traditional Recipe Book | Created by Salim Bello Muhammad</p>
+        <p>© 2026 All rights reserved. Celebrating the rich culinary heritage of Northern Nigeria.</p>
+    </footer>
+
+</body>
+</html>
