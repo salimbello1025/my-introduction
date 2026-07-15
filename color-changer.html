@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #378ADD;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1A6BCC;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Webpage Color Changer</h1>
+    <p>Click the button below to change the background color to blue.</p>
+
+    <button onclick="changeColor()">Change Background to Blue</button>
+
+    <script>
+        function changeColor() {
+            document.body.style.backgroundColor = "blue";
+        }
+    </script>
+
+</body>
+</html>
