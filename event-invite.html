@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechConnect Kano - Networking Event</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0f1e;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1A6BCC, #0a0f1e);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background-color: #f0c040;
+            color: #0a0f1e;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 20px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            color: #f0c040;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #c0d8f0;
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: #f0c040;
+            color: #0a0f1e;
+            padding: 16px 36px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0b030;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 16px 36px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Event Details Bar */
+        .details-bar {
+            background-color: #1A6BCC;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .detail-item {
+            color: white;
+            text-align: center;
+            padding: 24px 40px;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .detail-item:last-child {
+            border-right: none;
+        }
+
+        .detail-item .icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .detail-item .label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #c0d8f0;
+            display: block;
+        }
+
+        .detail-item .value {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .about h2 {
+            font-size: 30px;
+            color: #1A6BCC;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+
+        .about p {
+            font-size: 17px;
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        /* Highlights */
+        .highlights {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .highlight-card {
+            flex: 1;
+            min-width: 200px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-top: 4px solid #1A6BCC;
+        }
+
+        .highlight-card .icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .highlight-card h3 {
+            font-size: 18px;
+            color: #1A6BCC;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .highlight-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Agenda */
+        .agenda {
+            background-color: white;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .agenda h2 {
+            font-size: 30px;
+            color: #1A6BCC;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .agenda-item {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+            align-items: flex-start;
+        }
+
+        .agenda-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .agenda-time {
+            background-color: #e8f0fb;
+            color: #1A6BCC;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .agenda-content h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .agenda-content p {
+            font-size: 15px;
+            color: #777;
+        }
+
+        /* Guest List */
+        .guests {
+            background-color: white;
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .guests h2 {
+            font-size: 30px;
+            color: #1A6BCC;
+            margin-bottom: 24px;
+            font-weight: bold;
+        }
+
+        .guest-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .guest-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background-color: #f4f7fb;
+            padding: 16px 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .guest-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #1A6BCC;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .guest-info h4 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .guest-info p {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* RSVP Section */
+        .rsvp {
+            background: linear-gradient(135deg, #1A6BCC, #0a4f99);
+            border-radius: 16px;
+            padding: 56px 48px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .rsvp h2 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .rsvp p {
+            font-size: 18px;
+            color: #c0d8f0;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rsvp-form {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto 16px;
+        }
+
+        .rsvp-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .rsvp-form button {
+            background-color: #f0c040;
+            color: #0a0f1e;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .rsvp-form button:hover {
+            background-color: #e0b030;
+        }
+
+        .rsvp-note {
+            font-size: 13px;
+            color: #a0c0e0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0f1e;
+            color: #888;
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        footer a {
+            color: #f0c040;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <span class="badge">🌟 You're Invited</span>
+        <h1>TechConnect <span>Kano</span> 2026</h1>
+        <p>The biggest tech networking event in Northern Nigeria connecting innovators, designers, developers, and entrepreneurs.</p>
+        <div class="hero-buttons">
+            <a href="#rsvp" class="btn-primary">RSVP Now It's Free!</a>
+            <a href="#agenda" class="btn-secondary">View Agenda</a>
+        </div>
+    </div>
+
+    <!-- Event Details Bar -->
+    <div class="details-bar">
+        <div class="detail-item">
+            <span class="icon">📅</span>
+            <span class="label">Date</span>
+            <span class="value">Saturday, August 16, 2026</span>
+        </div>
+        <div class="detail-item">
+            <span class="icon">⏰</span>
+            <span class="label">Time</span>
+            <span class="value">9:00 AM -  5:00 PM</span>
+        </div>
+        <div class="detail-item">
+            <span class="icon">📍</span>
+            <span class="label">Location</span>
+            <span class="value">eHealth Africa Hall, Kano</span>
+        </div>
+        <div class="detail-item">
+            <span class="icon">🎟️</span>
+            <span class="label">Entry</span>
+            <span class="value">Free Admission</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- About -->
+        <div class="about">
+            <h2>About This Event</h2>
+            <p>
+                TechConnect Kano 2026 is a premier networking event bringing together the brightest minds in technology, design, and entrepreneurship from across Northern Nigeria. Whether you are a seasoned professional, a fresh graduate, or an aspiring entrepreneur, this event is your gateway to meaningful connections and new opportunities.
+            </p>
+            <p>
+                Join us for a day filled with inspiring talks, interactive workshops, live product demos, and genuine networking opportunities that could shape the next chapter of your career or business. Connect with industry leaders, discover new tools and trends, and be part of Kano's growing tech ecosystem.
+            </p>
+        </div>
+
+        <!-- Highlights -->
+        <div class="highlights">
+            <div class="highlight-card">
+                <span class="icon">🎤</span>
+                <h3>Keynote Talks</h3>
+                <p>Hear from industry leaders and innovators shaping the future of tech in Nigeria.</p>
+            </div>
+            <div class="highlight-card">
+                <span class="icon">🤝</span>
+                <h3>Networking</h3>
+                <p>Connect with 200+ professionals, designers, developers, and entrepreneurs.</p>
+            </div>
+            <div class="highlight-card">
+                <span class="icon">🛠️</span>
+                <h3>Workshops</h3>
+                <p>Hands-on sessions covering UI/UX design, web development, and AI tools.</p>
+            </div>
+            <div class="highlight-card">
+                <span class="icon">🏆</span>
+                <h3>Awards</h3>
+                <p>Celebrating the most innovative tech projects from Northern Nigeria this year.</p>
+            </div>
+        </div>
+
+        <!-- Agenda -->
+        <div class="agenda" id="agenda">
+            <h2>📋 Event Agenda</h2>
+
+            <div class="agenda-item">
+                <div class="agenda-time">9:00 AM</div>
+                <div class="agenda-content">
+                    <h3>Registration & Welcome Breakfast</h3>
+                    <p>Arrive, collect your badge, enjoy breakfast, and meet fellow attendees.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-time">10:00 AM</div>
+                <div class="agenda-content">
+                    <h3>Opening Keynote: The Future of Tech in Northern Nigeria</h3>
+                    <p>An inspiring talk on the growing tech ecosystem across Kano and the North.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-time">11:30 AM</div>
+                <div class="agenda-content">
+                    <h3>Workshop: UI/UX Design for Beginners</h3>
+                    <p>A hands-on introduction to designing user-friendly digital products in Figma.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-time">1:00 PM</div>
+                <div class="agenda-content">
+                    <h3>Lunch Break & Networking</h3>
+                    <p>Enjoy a delicious lunch while connecting with professionals in your field.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-time">2:30 PM</div>
+                <div class="agenda-content">
+                    <h3>Panel Discussion: Building a Tech Career in Nigeria</h3>
+                    <p>Industry experts share advice on breaking into tech, freelancing, and startups.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-time">4:00 PM</div>
+                <div class="agenda-content">
+                    <h3>Innovation Awards & Closing Ceremony</h3>
+                    <p>Celebrating the best tech projects of 2026 and closing remarks.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-time">5:00 PM</div>
+                <div class="agenda-content">
+                    <h3>Open Networking & Refreshments</h3>
+                    <p>Continue the conversations, exchange contacts, and enjoy refreshments.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guest List -->
+        <div class="guests">
+            <h2>👥 Confirmed Guests</h2>
+            <div class="guest-grid">
+                <div class="guest-card">
+                    <div class="guest-avatar">SB</div>
+                    <div class="guest-info">
+                        <h4>Salim Bello Muhammad</h4>
+                        <p>UI/UX Designer, EHA Academy</p>
+                    </div>
+                </div>
+                <div class="guest-card">
+                    <div class="guest-avatar">IK</div>
+                    <div class="guest-info">
+                        <h4>Ibrahim Khalil</h4>
+                        <p>Data Analyst, 3MTT</p>
+                    </div>
+                </div>
+                <div class="guest-card">
+                    <div class="guest-avatar">MB</div>
+                    <div class="guest-info">
+                        <h4>Maryam Bello Muhammad</h4>
+                        <p>Entrepreneur, Kano State</p>
+                    </div>
+                </div>
+                <div class="guest-card">
+                    <div class="guest-avatar">HB</div>
+                    <div class="guest-info">
+                        <h4>Huzaifa Bello Muhammad</h4>
+                        <p>Information Technology</p>
+                    </div>
+                </div>
+                <div class="guest-card">
+                    <div class="guest-avatar">AD</div>
+                    <div class="guest-info">
+                        <h4>Abba Daniel</h4>
+                        <p>Designer, eHealth Africa</p>
+                    </div>
+                </div>
+                <div class="guest-card">
+                    <div class="guest-avatar">BD</div>
+                    <div class="guest-info">
+                        <h4>Bello Muhammad Dandago</h4>
+                        <p>Project Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSVP Section -->
+        <div class="rsvp" id="rsvp">
+            <h2>Reserve Your Spot Today</h2>
+            <p>Spaces are limited to 200 attendees. RSVP now to secure your free ticket!</p>
+            <div class="rsvp-form">
+                <input type="email" placeholder="Enter your email address">
+                <button>RSVP Now →</button>
+            </div>
+            <p class="rsvp-note">✅ Free admission • ✅ Lunch included • ✅ Certificate of attendance</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>📍 eHealth Africa Hall, Independence Road, Kano, Nigeria</p>
+        <p>📧 <a href="mailto:techconnectkano@gmail.com">techconnectkano@gmail.com</a> | 📞 +234 8126115105</p>
+        <p>© 2026 TechConnect Kano. Created by Salim Bello Muhammad.</p>
+    </footer>
+
+</body>
+</html>
